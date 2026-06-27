@@ -1,0 +1,17 @@
+project_name: Candidate Ranker AI
+submission_version: v1
+task_type: candidate_ranking
+models:
+  ranking_model: sentence-transformers/all-MiniLM-L6-v2
+  explanation_model: gpt-4o-mini
+dataset:
+  source: provided_challenge_dataset
+  version: snapshot_1
+pipeline:
+  parser: custom_resume_parser
+  scorer: weighted_multi_factor_ranker
+  filters:
+    - non_technical_title_penalty
+    - service_firm_penalty
+    - stale_activity_penalty
+notes: "Ranks candidates using semantic similarity plus business-rule adjustments."
