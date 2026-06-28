@@ -42,7 +42,7 @@ See `/src` for ML pipeline modules and `/app` for execution entry point.
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/<your-username>/ai-candidate-ranker.git
+git clone https://github.com/<MohammedTouqeerUrRaiyan>/ai-candidate-ranker.git
 cd ai-candidate-ranker
 python -m venv venv
 venv\Scripts\activate
